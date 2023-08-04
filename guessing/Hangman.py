@@ -21,24 +21,24 @@ word_list_source = ["earth", "no", "sound", "made",
 ]
 word_list = [word.lower() for word in word_list_source]
 secret_word = word_list[int(number)]
-
+gap = len(secret_word)
 
 while guess != secret_word and not(out_of_guesses):
     for letter in secret_word:
         if letter in guess:
-            print(letter)
+            print(letter, end = "")
         else:
-            print("_")
+            print("_", end = "")
     if guess_count > guess_limit:
-        guess = input("pick a letter: ")
-        guess_count -= 1
-        print("you have " + str(guess_count) + " more guesses")
+        guess = input("pick a letter: ")  
     else:
         out_of_guesses = True
     if guess in secret_word:
         print("yeah")
     else:
         print("wrong")
+        print("you have " + str(guess_count) + " more guesses")
+        guess_count -= 1 
 if guess == secret_word:
     print("you won!")
 else:
