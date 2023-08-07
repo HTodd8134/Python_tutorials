@@ -1,5 +1,5 @@
 #use pymoll env
 
-import play.pymol as py
+import pymol as py
 
 py.fetch("1yyf")

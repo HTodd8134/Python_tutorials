@@ -22,3 +22,19 @@ class GUI:
     def show_message(self):
         print("button was pressed")
 GUI()
+
+
+
+def equals(num1, num2):
+    if choice == 'a':
+        out = num1 + num2
+        return
+    elif choice == 's':
+        out = num1 - num2
+        return
+    elif choice == 'm':
+        out == num1 * num2
+        return
+    elif choice == 'd':
+        out == num1 // num2
+        return
