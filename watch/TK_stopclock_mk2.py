@@ -7,7 +7,7 @@ root.geometry("300x170")
 
 text_result = tk.Text(root, height=2, width=25)
 text_result.grid(columnspan=5)
-# Nicolas
+# Nicolas  
 #btn_÷//start = tk.Button(root, width=7, text="start")
 #btn_start.grid(row=2, column=0)
 #btn_stop = tk.Button(root, width=7, text="stop")
