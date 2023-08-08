@@ -1,9 +1,10 @@
 import time
 
 def counter(sec):
+    
     mins = sec//60
     hours = mins//60
-    print("time lapsed = {0}:{1}:{2}".format(int(hours),int(mins),int(sec)))
+    print(f"time lapsed = {hours}:{mins}:{secs}")
 
 input("press enter to start")
 start_time = time.time()
