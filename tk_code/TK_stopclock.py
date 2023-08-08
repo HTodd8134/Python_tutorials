@@ -10,35 +10,38 @@ root.title("Stopclock")
 
 class btn(NamedTuple):
     label: str
+    command: function
 
 CYCLE = (
-    btn(label="start"),
-    btn(label="stop")
+    btn(label="start", command=stopclock.start()),
+    btn(label="stop", command=stopclock.stop())
 )
 
 class stopclock:
-    def __init__(self, butn = CYCLE):
-        self.button = tk.Button(root, text=current_btn.label, command=switch)
-        self.new_btn = cycle(butn)
-        current_btn = next(butn)
-    
-    def startup(self):
-        start_time = time.time()
-        update_time()
+    def __init__(self, CYCLE):
+        self.button = tk.Button(root, text=self.current_btn.label, command=switch)
+        self.new_btn = cycle(CYCLE)
+        self.current_btn = next(CYCLE)
+        self.
+
 
     def update_time(self):
-        time_elapsed = end_time - start_time
-        counter(time_elapsed)
+        self.time_elapsed = self.end_time - self.start_time
+        counter(self.time_elapsed)
 
     def counter(self, secs):
-        sec = secs
-        mins = secs//60
-        hours = mins//60
-        display = tk.Label(root, text="{0}:{1}:{2}".format(int(hours), int(mins), int(sec))) 
+        self.sec = secs
+        self.mins = secs//60
+        self.hours = self.mins//60
+        self.display = tk.Label(root, text="{0}:{1}:{2}".format(int(self.hours), int(self.mins), int(self.sec))) 
 
     def switch(self):
         current_btn = next(self.new_butn)
 
+    def start(self):
+        self.start_time = time.time()
 
+    def stop(self):
+        self.end_time = time.time()
 
-root.mainloop()
+instance = stopclock()
