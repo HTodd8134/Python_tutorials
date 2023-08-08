@@ -1,4 +1,4 @@
-import numpy as np
+import numpy as np #useful_pac env
 new = " "
 list = ["string", "cat", "ball", "toys", "mittens"]
 grades = [98, 55, 67, 20, 100, 59, 73, 81]

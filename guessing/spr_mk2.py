@@ -1,5 +1,5 @@
 import random
-import time
+
 choices = [
     "scissors", "paper", "rock"
 ]

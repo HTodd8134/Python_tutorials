@@ -1,10 +1,14 @@
 import random as rand
 count = 0
 winscale = 0
+options = [
+    "heads",
+    "tails"
+]
 def counter(point):
-    mine = int(input("pick a number 1-2: "))
-    num = rand.randint(0,1)
-    if mine == num:
+    mine = input("heads or tails: ")
+    comp = rand.choice(options)
+    if mine == comp:
         point += 1
         print("win")
         return point
