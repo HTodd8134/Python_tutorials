@@ -28,3 +28,20 @@ one.check_employee()
 two.check_employee()
 three.check_employee()
 four.check_employee()
+
+
+class FarmWorker(Worker):
+    def __init__(self, farm, *args, **kwargs):
+        super(FarmWorker, self).__init__(*args, **kwargs)
+        self.farm = farm
+        
+    def shout(self, phrase):
+        print('Yayyyy '+ phrase)
+
+one2 = FarmWorker('',"Jill", "HR", 200, 20, "nice", "")
+
+one2.check_employee()
+one2.shout('Hello world')
+one2.job = 'Farmer'
+one2.farm = 'Uncle bob Farm'
+print(one2.farm)

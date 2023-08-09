@@ -1,7 +1,7 @@
 import time
 
 def counter(sec):
-    
+    secs = int(sec)
     mins = sec//60
     hours = mins//60
     print(f"time lapsed = {hours}:{mins}:{secs}")

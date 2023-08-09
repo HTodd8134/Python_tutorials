@@ -1,4 +1,4 @@
-import _tkinter as tk
+import tkinter as tk
 from typing import NamedTuple
 from itertools import cycle
 
@@ -18,15 +18,26 @@ class Player:
 
 
 class Board:
-    def __init__(self, move):
+    def __init__(self):
         self.board = tk.Tk()
         self.board.title("tic-tac-toe")
+        self.setup_board()
         self.board.mainloop()
+    
     def setup_board(self):
-        self.grid = tk.Frame(master = self.board, columnspan=3, rowspan=3)
-        
+        self.grids = tk.Frame(master = self.board)
+        for row in range(3):
+            self.columnconfigure(row, weight=1)
+            self.rowconfigure(row, weight=1)
+            for col in range(3):
+                btn = tk.Button(self.board,)
 
 
 class GameLogic:
     def __init__(self):
         pass
+def main():
+    baord = Board()
+
+if __name__ == "__main__":
+    main()
